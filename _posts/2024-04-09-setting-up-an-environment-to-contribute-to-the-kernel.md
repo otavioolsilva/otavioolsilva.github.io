@@ -2,14 +2,14 @@
 title: Setting up an environment to contribute to the Kernel
 date: 2024-04-09 15:30:00 -0300
 categories: [Experiences with FLOSS, starting]
-tags: [FLOSS, setup, kernel, linux]
+tags: [FLOSS, setup, kernel, linux, MAC0470]
 ---
 
 Before start contributing to any project, we must configure our workspace. That's what this post is about! Here I relate my experience setting up my development environment to be able to contribute to the Linux Kernel, following some [FLUSP ("FLOSS at USP")](https://flusp.ime.usp.br/) tutorials. After all, what better project to start contributing to FLOSS than the Kernel? :)
 
 ## Creating Virtual Machines
 
-In the [first tutorial](https://flusp.ime.usp.br/kernel/qemu-libvirt-setup/), I created a virtual machine using QEMU and libvirt, so I could test my Linux Kernel without destroying my own machine in the process. First, we need an operational system: I chose to work with Debian 12 for the arm64 architecture, following suggestions from the tutorial. I had some trouble dealing with the disk resize, but some classmates helped me and everything went alright. So, with the image in hands, I setted up libvirt and the ssh connection with no more troubles (sshd in the VM gave me some problems but reconfiguring it with dpkg-reconfigure was enough to get it working). Libvirt looks like a great way to deal with VMs, with intuitive commands, and the possibility provided by QEMU to extract the kernel from the image and working with a external kernel sounds great too!
+In the [first tutorial](https://flusp.ime.usp.br/kernel/qemu-libvirt-setup/), I created a virtual machine using QEMU and libvirt, so I could test my Linux Kernel without destroying my own machine in the process. First, we need an operational system: I chose to work with Debian 12 for the arm64 architecture, following suggestions from the tutorial. I had some trouble dealing with the disk resize, but some classmates helped me and everything went alright. So, with the image in hands, I setted up libvirt and the ssh connection with no more troubles (sshd in the VM gave me some problems but reconfiguring it with `dpkg-reconfigure` was enough to get it working). Libvirt looks like a great way to deal with VMs, with intuitive commands, and the possibility provided by QEMU to extract the kernel from the image and working with a external kernel sounds great too!
 
 ## The first Linux Kernel build
 
