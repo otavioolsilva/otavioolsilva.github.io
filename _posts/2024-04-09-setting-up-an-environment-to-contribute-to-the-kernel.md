@@ -2,7 +2,7 @@
 title: Setting up an environment to contribute to the Kernel
 date: 2024-04-09 15:30:00 -0300
 categories: [Experiences with FLOSS, starting]
-tags: [FLOSS, setup, kernel, linux, MAC0470]
+tags: [FLOSS, setup, kernel-linux, MAC0470]
 ---
 
 Before start contributing to any project, we must configure our workspace. That's what this post is about! Here I relate my experience setting up my development environment to be able to contribute to the Linux Kernel, following some [FLUSP ("FLOSS at USP")](https://flusp.ime.usp.br/) tutorials. After all, what better project to start contributing to FLOSS than the Kernel? :)

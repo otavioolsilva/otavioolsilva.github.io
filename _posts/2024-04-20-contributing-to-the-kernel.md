@@ -2,7 +2,7 @@
 title: Contributing to the Kernel
 date: 2024-04-20 23:00:00 -0300
 categories: [Experiences with FLOSS, starting]
-tags: [FLOSS, IIO, kernel, linux, MAC0470]
+tags: [FLOSS, IIO, kernel-linux, MAC0470]
 ---
 
 In the [last post](https://otavioolsilva.github.io/posts/setting-up-an-environment-to-contribute-to-the-kernel/) I learned how to deal with VM's, build the Linux Kernel and configured my environment. Now, it's time to make use of this knowledge and finally make a contribution to the Kernel. Or at least, try to make one.
