@@ -23,3 +23,5 @@ We followed the same steps as done in the first tutorial, but this time we faced
 
 In the end we didn't send the package to the upstream, but I got surprised about how simple is the whole process, a way more easy than I though before. And this a great way of contribute to the community! I found great learning how to do it.
 
+This post was made as part of the discipline MAC0470 - Desenvolvimento de Software Livre, BCC - IME - USP.
+

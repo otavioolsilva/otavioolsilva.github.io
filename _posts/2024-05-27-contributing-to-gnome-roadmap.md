@@ -28,3 +28,5 @@ Our roadmap for the next few weeks is this one:
 
 The issue cited above seems to be a great one to start our journey and we expect it won't be the only one we will work on. By the weeks go on, I hope to make some more posts about our progress.
 
+This post was made as part of the discipline MAC0470 - Desenvolvimento de Software Livre, BCC - IME - USP.
+
