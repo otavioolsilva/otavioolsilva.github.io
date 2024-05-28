@@ -15,7 +15,7 @@ This project was born at the University of São Paulo by some Computer Science s
 
 ## Contributing
 
-After some time looking the issues listed in the GitHub repo, me and my partner [Felipe Aníbal](https://felipeanibal.github.io/#) chose to work on an [enhacement suggestion](https://github.com/kworkflow/kworkflow/issues/1096) to `kw drm` made by [Rodrigo Siqueira](https://github.com/rodrigosiqueira), one of the main maintainers in the project.
+After some time looking the issues listed in the GitHub repo, me and my partner [Felipe Aníbal](https://felipeanibal.github.io/sl) chose to work on an [enhacement suggestion](https://github.com/kworkflow/kworkflow/issues/1096) to `kw drm` made by [Rodrigo Siqueira](https://github.com/rodrigosiqueira), one of the main maintainers in the project.
 
 `kw drm` is a tool aimed to provide some facilities to interact with the DRM subsystem in the Linux Kernel. The Direct Rendering Manager (DRM) subsystem is responsible for interfacing with GPUs of modern video cards, making possible to the user to send commands to the GPU and send/get some data. The `kw drm` tool uses this API to make easier to perform some actions, such as the one I describe bellow.
 

@@ -5,7 +5,7 @@ categories: [Experiences with FLOSS, GNOME]
 tags: [FLOSS, setup, gnome-calendar, MAC0470]
 ---
 
-Our [contribution to the KW tool was accepted](https://otavioolsilva.github.io/posts/contributing-to-kw/#update-pull-request-accepted), so it's time for a new challenge! Me and my partner [Felipe Aníbal](https://felipeanibal.github.io/#) decided to keep contributing now the [GNOME](https://www.gnome.org/) project, the desktop environment (DE) we use daily. What a better incentive than this one?
+Our [contribution to the KW tool was accepted](https://otavioolsilva.github.io/posts/contributing-to-kw/#update-pull-request-accepted), so it's time for a new challenge! Me and my partner [Felipe Aníbal](https://felipeanibal.github.io/sl) decided to keep contributing now with the [GNOME](https://www.gnome.org/) project, the desktop environment (DE) we use daily. What a better incentive than this one?
 
 ## Choosing the project
 
