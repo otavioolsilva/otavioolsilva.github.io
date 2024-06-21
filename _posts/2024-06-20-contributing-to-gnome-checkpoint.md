@@ -13,9 +13,13 @@ During all my time using GNU/Linux I have used the GNOME Desktop Environment (DE
 
 The idea of the issue is: when creating an event on the Calendar you can set its location, which is exibited in the popover widget (the popup box that opens when you click at the event) and in the tooltip (the dialog that is shown when the mouse hovers over the event). In the popover, a cool feature is that when the location is a known meeting service link, its name is showed above the URL:
 
-![Meeting service name above the URL](https://i.imgur.com/c3kx6jO.png)
+![Meeting service name above the URL](https://i.imgur.com/FgACqcw.png)
 
-However, in the tooltip it isn't useful to display all the URL, as it can end up hiding other informations bellow the tooltip, specially when the link is big, and it isn't even clickable. So, why not to reuse the function that parses the URL in the popover to display the meeting service provider name in the tooltip instead of the link? We have work to do!
+However, in the tooltip it isn't useful to display all the URL, as it can end up hiding other informations bellow the tooltip, especially when the link is big, and it isn't even clickable:
+
+![Tooltip can be annoying](https://i.imgur.com/VgFdI6f.png)
+
+So, why not to reuse the function that parses the URL in the popover to display the meeting service provider name in the tooltip instead of the link? We have work to do!
 
 The first task was to reproduce the current behaviour and try to understand at code level what was happening, and this was the goal for this week. The tooltip to an event is generated in the `gcal_event_widget_set_event_tooltip` function in the [gcal-event-widget.c](https://gitlab.gnome.org/GNOME/gnome-calendar/-/blob/main/src/gui/gcal-event-widget.c?ref_type=heads) file, and the point that really interest us is when the location is defined:
 
