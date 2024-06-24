@@ -52,6 +52,8 @@ So, considering the code snippet above, we just needed to change the logic of ho
 
 Alright, seems to be a good flow, but how the popover discovers the meeting service provider name? This turned out to be a little problem: the function used to do it (`get_service_name_from_url`) is defined locally in the [gcal-meeting-row.c](https://gitlab.gnome.org/GNOME/gnome-calendar/-/blob/main/src/gui/gcal-meeting-row.c?ref_type=heads) file. As we are now needing to use it in another context, nothing more reasonable than move it to the [gcal-utils.c](https://gitlab.gnome.org/GNOME/gnome-calendar/-/blob/main/src/utils/gcal-utils.c?ref_type=heads) file. We asked the maintainers about it and are still waiting for confirmation of [Georges Stavracas (@feaneron)](https://gitlab.gnome.org/feaneron).
 
+Update: [merge request submitted!](https://gitlab.gnome.org/GNOME/gnome-calendar/-/merge_requests/453)
+
 ## Third week: the second issue, we went too deep
 
 As the first issue went well, while waiting for the maintainers answers we decided to search another things to do. Looking at the [@jfft personal blog](https://fortintam.com/blog/) I ended up getting into this [post](https://fortintam.com/blog/call-for-help-writing-gnome-calendar-compliance-unit-tests/), which is a call for the community to contribute expanding the Calendar test suite. Me and Felipe thought it was a great opportunity to discover more about how this app works, as we would need to dig in the code to find its weak points, and at the same time contribute to make it more solid.
