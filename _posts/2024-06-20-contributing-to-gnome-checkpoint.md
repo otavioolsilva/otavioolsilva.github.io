@@ -9,7 +9,7 @@ After some weeks studying and thinking on some [GNOME Calendar issues on GitLab]
 
 ## First week: studying the app and the first issue
 
-During all my time using GNU/Linux I have used the GNOME Desktop Environment (DE), but had never looked at the code under the hood. So, to start contributing to it, not more plausible than look at the issues labeled with the 'newcomers' tag, and that was the greatest motivation for me and [Felipe](https://felipeanibal.github.io/) to choose the [#1232 issue](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1232). Futhermore, it was created by one of the maintainers of the project not so long ago and really seemed to be a feasible task, with clear instructions of the behaviour expected to be implemented.
+During all my time using GNU/Linux I have used the GNOME Desktop Environment (DE), but had never looked at the code under the hood. So, to start contributing to it, not more plausible than look at the issues labeled with the 'newcomers' tag, and that was the greatest motivation for me and [Felipe](https://felipeanibal.github.io/) to choose the [#1232 issue](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1232). Futhermore, it was created by one of the maintainers of the project not so long ago and really seemed to be a feasible task, with clear instructions of the behavior expected to be implemented.
 
 The idea of the issue is: when creating an event on the Calendar you can set its location, which is exibited in the popover widget (the popup box that opens when you click at the event) and in the tooltip (the dialog that is shown when the mouse hovers over the event). In the popover, a cool feature is that when the location is a known meeting service link, its name is showed above the URL:
 
@@ -21,7 +21,7 @@ However, in the tooltip it isn't useful to display all the URL, as it can end up
 
 So, why not to reuse the function that parses the URL in the popover to display the meeting service provider name in the tooltip instead of the link? We have work to do!
 
-The first task was to reproduce the current behaviour and try to understand at code level what was happening, and this was the goal for this week. The tooltip to an event is generated in the `gcal_event_widget_set_event_tooltip` function in the [gcal-event-widget.c](https://gitlab.gnome.org/GNOME/gnome-calendar/-/blob/main/src/gui/gcal-event-widget.c?ref_type=heads) file, and the point that really interest us is when the location is defined:
+The first task was to reproduce the current behavior and try to understand at code level what was happening, and this was the goal for this week. The tooltip to an event is generated in the `gcal_event_widget_set_event_tooltip` function in the [gcal-event-widget.c](https://gitlab.gnome.org/GNOME/gnome-calendar/-/blob/main/src/gui/gcal-event-widget.c?ref_type=heads) file, and the point that really interest us is when the location is defined:
 
 ```c
     /* Append event location */
@@ -38,7 +38,7 @@ The first task was to reproduce the current behaviour and try to understand at c
     }
 ```
 
-So, our job was to reimplement the way the location is inserted into the tooltip in the code snippet above to follow this new proposed behaviour. But how to deal with the location when the link is to a unknown meeting service? And when the location is a real place, not a URL? We made a [comment](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1232#note_2125426) in the issue in GitLab to clarify this points and to express our intention to work on this issue, this being our first contact to the maintainers in the project.
+So, our job was to reimplement the way the location is inserted into the tooltip in the code snippet above to follow this new proposed behavior. But how to deal with the location when the link is to a unknown meeting service? And when the location is a real place, not a URL? We made a [comment](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1232#note_2125426) in the issue in GitLab to clarify this points and to express our intention to work on this issue, this being our first contact to the maintainers in the project.
 
 ## Second week: implementing, but not submitting
 
@@ -64,7 +64,7 @@ I think this issue was a great exploration exercise for us, but all we reported 
 
 ## Now
 
-As I'm writing this, we are waiting for the maintainers to answer both of the issues. In the first issue, we already implemented locally a way to provide the expected behaviour and are waiting the @feaneron confirmation to then send the merge request. In the second, we are waiting to get some thoughts on how to proceed. I think waiting is part of the experience too. Our roadmap expired, but we will keep working on these issues and maybe on some more, it has been a great experience! More updates in a next post.
+As I'm writing this, we are waiting for the maintainers to answer both of the issues. In the first issue, we already implemented locally a way to provide the expected behavior and are waiting the @feaneron confirmation to then send the merge request. In the second, we are waiting to get some thoughts on how to proceed. I think waiting is part of the experience too. Our roadmap expired, but we will keep working on these issues and maybe on some more, it has been a great experience! More updates in a next post.
 
 This post was made as part of the discipline MAC0470 - Desenvolvimento de Software Livre, BCC - IME - USP.
 
