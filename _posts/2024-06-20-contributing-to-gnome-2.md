@@ -5,7 +5,7 @@ categories: [Experiences with FLOSS, GNOME]
 tags: [FLOSS, gnome-calendar, MAC0470]
 ---
 
-After some weeks studying and thinking on some [GNOME Calendar issues on GitLab](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues), this is a first report of our advances in this new project, following the roadmap described in the [last post](https://otavioolsilva.github.io/posts/contributing-to-gnome-roadmap/). 
+After some weeks studying and thinking on some [GNOME Calendar issues on GitLab](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues), this is a first report of our advances in this new project, following the roadmap described in the [last post](https://otavioolsilva.github.io/posts/contributing-to-gnome-1/). 
 
 ## First week: studying the app and the first issue
 

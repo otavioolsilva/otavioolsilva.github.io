@@ -5,7 +5,7 @@ caterogies: [Experiences with FLOSS, GNOME]
 tags: [FLOSS, gnome-calendar]
 ---
 
-Finally the next post announced in the ["Contributing to GNOME, checkpoint"](https://otavioolsilva.github.io/posts/contributing-to-gnome-checkpoint/) is here, the last few weeks have been a bit intense working on the GNOME Calendar project, we did some great advances! At that moment, me and [Felipe](https://felipeanibal.github.io/) sent a merge request to the maintainers in the first issue ([#1232](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1232)) and were waiting their feedback. In the second issue ([#1202](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1202)), in which we just did some observations on the problem, we were just waiting too. From that point, a lot has happened.
+Finally the next post announced in the ["Contributing to GNOME, checkpoint"](https://otavioolsilva.github.io/posts/contributing-to-gnome-2/) is here, the last few weeks have been a bit intense working on the GNOME Calendar project, we did some great advances! At that moment, me and [Felipe](https://felipeanibal.github.io/) sent a merge request to the maintainers in the first issue ([#1232](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1232)) and were waiting their feedback. In the second issue ([#1202](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1202)), in which we just did some observations on the problem, we were just waiting too. From that point, a lot has happened.
 
 ## The first issue, #1232
 
