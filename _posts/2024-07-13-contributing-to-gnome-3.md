@@ -1,6 +1,6 @@
 ---
 title: Contributing to GNOME, great advances!
-date: 2024-07-13 15:00:00 -0300
+date: 2024-07-13 20:00:00 -0300
 caterogies: [Experiences with FLOSS, GNOME]
 tags: [FLOSS, gnome-calendar]
 ---
