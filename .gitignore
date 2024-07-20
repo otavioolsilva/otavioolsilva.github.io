@@ -22,3 +22,6 @@ assets/js/dist
 
 # Post templates
 TEMPLATE-*
+
+serve.sh
+
