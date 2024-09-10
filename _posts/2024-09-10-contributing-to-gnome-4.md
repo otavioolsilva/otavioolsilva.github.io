@@ -58,4 +58,4 @@ During the time we were studying the issues above, Jeff created a new issue ([#1
 
 Our experience so far with this topic wasn't exactly vast: when we created a test for the issue [#171](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/171) we just looked at how the others were implemented and tried to follow the pattern, and the [GNOME Builder](https://apps.gnome.org/Builder/) runs the tests just with the click of a button, without any difficulty. But this could be a great starting point for creating this new documentation! We will think more about it.
 
-This post was made as part of the discipline MAC0456 - Tópicos Especiais em Engenharia de Software (yes, a new one!), BCC - IME - USP.
+This post was made as part of the discipline MAC0456 - Tópicos Especiais em Engenharia de Software (yes, a new discipline!), BCC - IME - USP.
