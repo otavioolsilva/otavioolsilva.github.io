@@ -1,6 +1,6 @@
 ---
 title: Contributing to GNOME, timezones and more timezones
-date: 2024-09-10 14:00:00 -0300
+date: 2024-09-10 17:00:00 -0300
 categories: [Experiences with FLOSS, GNOME]
 tags: [FLOSS, gnome-calendar, MAC0456]
 ---
