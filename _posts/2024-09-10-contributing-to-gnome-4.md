@@ -1,11 +1,11 @@
 ---
-title: Contributing to GNOME, timezones and more timezones
+title: Contributing to GNOME, time zones and more time zones
 date: 2024-09-10 17:00:00 -0300
 categories: [Experiences with FLOSS, GNOME]
 tags: [FLOSS, gnome-calendar, MAC0456]
 ---
 
-In the [last post](https://otavioolsilva.github.io/posts/contributing-to-gnome-3/), me and [Felipe Aníbal](https://felipeanibal.github.io/) have made some great advances, and I think it wasn't different this time (or maybe I'm just accumulating too much content for one post). Our expectations were to keep looking at issues from the GNOME Calendar related to timezones, specially trying to expand the test suite on it, as described in the epic issue [#1093](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1093). We submitted patches for two of the issues listed and we're also working on some others of them, lots of work to do!
+In the [last post](https://otavioolsilva.github.io/posts/contributing-to-gnome-3/), me and [Felipe Aníbal](https://felipeanibal.github.io/) have made some great advances, and I think it wasn't different this time (or maybe I'm just accumulating too much content for one post). Our expectations were to keep looking at issues from the GNOME Calendar related to time zones, specially trying to expand the test suite on it, as described in the epic issue [#1093](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1093). We submitted patches for two of the issues listed and we're also working on some others of them, lots of work to do!
 
 Also it's worth to point out that the [GNOME 47 is very close to be released](https://release.gnome.org/calendar/)! We're currently at the 47.rc version (release candidate) and the 47 newstable release is planned for September 18th. The merge requests we sent so far will be available on the stable version of the GNOME Calendar in this release! 🥳
 
@@ -16,7 +16,7 @@ There is some ways to add events to the GNOME Calendar and one of them is import
 ![GNOME Calendar import dialog](https://gitlab.gnome.org/-/project/198/uploads/4322f60a26da8af98aba0f47766c02de/image.png)
 _Import dialog displayed when importing a new event_
 
-Some problems with it were related in [#1175](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1175). Note that in the picture above the start time of the event is 12:30 PM and the end time is 01:30 PM. The iCalendar file used to import this event have defined the start time to be 12:30 PM in the UTC timezone and the end time 01:30 PM also in the UTC timezone, but the screenshot was taken in the -05 timezone! So, the first problem is that the dialog was showing UTC events without converting them to the local timezone before displaying them. Fortunately, the [GLib](https://docs.gtk.org/glib/index.html) (a very useful library used as the low-level core for many projects such as GNOME and GTK) has a function that easily makes this conversion: [g_date_time_to_local](https://docs.gtk.org/glib/method.DateTime.to_local.html). Given a date in the correct struct, this function converts it to the local timezone, and we used it to fix the observed behavior.
+Some problems with it were related in [#1175](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1175). Note that in the picture above the start time of the event is 12:30 PM and the end time is 01:30 PM. The iCalendar file used to import this event have defined the start time to be 12:30 PM in the UTC time zone and the end time 01:30 PM also in the UTC time zone, but the screenshot was taken in the -05 time zone! So, the first problem is that the dialog was showing UTC events without converting them to the local time zone before displaying them. Fortunately, the [GLib](https://docs.gtk.org/glib/index.html) (a very useful library used as the low-level core for many projects such as GNOME and GTK) has a function that easily makes this conversion: [g_date_time_to_local](https://docs.gtk.org/glib/method.DateTime.to_local.html). Given a date in the correct struct, this function converts it to the local time zone, and we used it to fix the observed behavior.
 
 That wasn't the only problem: also note that the start and end dates were being displayed in the 12-hours format (with AM/PM), and this was the behavior even if the user configured its system to prefer the 24-hours format. So, when constructing the string to be showed, we first needed to check the system preference for the time format. However, this information is keep in a GcalContext struct, that we didn't had access in this specific function. To handle this, we had to make it available by passing this struct as an argument to the function that creates each one of the entries in the dialog. After that, we just did a switch case to use the correct format.
 
@@ -29,7 +29,7 @@ Remember, however, that we found this issue in that epic issue that asked for im
 
 ## A curious drag and drop bug, #1198
 
-Another interesting issue ([#1198](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1198)): specifically in the week where the switch of timezones for daylight savings occurs, when dragging and dropping an event to change its date/time in the Calendar its start and end times would be shifted by one hour, as you can see in the video bellow (click to view it, credits to [Jeff](https://gitlab.gnome.org/jfft)):
+Another interesting issue ([#1198](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1198)): specifically in the week where the switch of time zones for daylight savings occurs, when dragging and dropping an event to change its date/time in the Calendar its start and end times would be shifted by one hour, as you can see in the video bellow (click to view it, credits to [Jeff](https://gitlab.gnome.org/jfft)):
 
 ![A video reproducing the issue](https://gitlab.gnome.org/-/project/198/uploads/cd3ebe90a465619a2c427ce3e91eff87/GNOME_Calendar_46_weekview_timetable_drag-and-drop_event_moving_during_week_of_the_DST_switch.webm)
 _Events are being displayed with an one hour offset, click above to view the video_
@@ -40,15 +40,15 @@ So, we just changed the code that was related to the drag and drop action to use
 
 ## Work in progress
 
-We are currently working on some other issues that are also related to the epic issue about the timezone test suite cited in the introduction:
+We are currently working on some other issues that are also related to the epic issue about the time zone test suite cited in the introduction:
 
 ### More for the import dialog
 
-Looking at the list of issues, [#1221](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1221) caught our attention: an event with the timezone explicit defined in the .ics file is being created as being in the UTC timezone. However, the problem seems to be a little more complex: the chosen timezone (EDT) isn't defined in the majority of systems, and so the Calendar just chose to use the UTC one. But this is the appropriate behavior? What should we do in this case? We discussed a little about this in the matrix chatroom, but we still need to figure out how to deal with this.
+Looking at the list of issues, [#1221](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1221) caught our attention: an event with the time zone explicit defined in the .ics file is being created as being in the UTC time zone. However, the problem seems to be a little more complex: the chosen time zone (EDT) isn't defined in the majority of systems, and so the Calendar just chose to use the UTC one. But this is the appropriate behavior? What should we do in this case? We discussed a little about this in the matrix chatroom, but we still need to figure out how to deal with this.
 
-Also, the issue [#1110](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1110) seemed to be very similar to this one described above: timezones being used but the event was being incorrectly imported. In this case, the timezone is defined in the .ics file as a virtual timezone, with the explicit time offsets. Currently, the Calendar is not able to interpret it correctly and just displays the event as being in UTC.
+Also, the issue [#1110](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1110) seemed to be very similar to this one described above: time zones being used but the event was being incorrectly imported. In this case, the time zone is defined in the .ics file as a virtual time zone, with the explicit time offsets. Currently, the Calendar is not able to interpret it correctly and just displays the event as being in UTC.
 
-Not only these two above, but the [#1243](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1243) also seemed to have a related problem: some .ics files with virtual timezone not only are being incorrectly interpreted, but also breaks the import dialog. Looking more close to this issue, me and Felipe figured out that the problem was happening for a different reason than the virtual timezone on the file: the encoding used for the example file in the issue is UTF-16LE and the GLib usually works with UTF-8, and apparently this leads to a problem during the parse of the file if an explicit conversion isn't made.
+Not only these two above, but the [#1243](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1243) also seemed to have a related problem: some .ics files with virtual time zone not only are being incorrectly interpreted, but also breaks the import dialog. Looking more close to this issue, me and Felipe figured out that the problem was happening for a different reason than the virtual time zone on the file: the encoding used for the example file in the issue is UTF-16LE and the GLib usually works with UTF-8, and apparently this leads to a problem during the parse of the file if an explicit conversion isn't made.
 
 So, all this three issues are somehow related and we are working on them! Probably one at a time. :)
 
