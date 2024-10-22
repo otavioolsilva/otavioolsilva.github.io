@@ -5,7 +5,7 @@ categories: [Experiences with FLOSS, GNOME]
 tags: [FLOSS, gnome-calendar]
 ---
 
-Finally the next post announced in the ["Contributing to GNOME, checkpoint"](https://otavioolsilva.github.io/posts/contributing-to-gnome-2/) is here, the last few weeks have been a bit intense working on the GNOME Calendar project, we did some great advances! At that moment, me and [Felipe](https://felipeanibal.github.io/) sent a merge request to the maintainers in the first issue ([#1232](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1232)) and were waiting their feedback. In the second issue ([#1202](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1202)), in which we just did some observations on the problem, we were just waiting too. From that point, a lot has happened.
+Finally the next post announced in the ["Contributing to GNOME, checkpoint"](https://otavioolsilva.github.io/posts/contributing-to-gnome-02/) is here, the last few weeks have been a bit intense working on the GNOME Calendar project, we did some great advances! At that moment, me and [Felipe](https://felipeanibal.github.io/) sent a merge request to the maintainers in the first issue ([#1232](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1232)) and were waiting their feedback. In the second issue ([#1202](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1202)), in which we just did some observations on the problem, we were just waiting too. From that point, a lot has happened.
 
 ## The first issue, #1232
 
@@ -13,10 +13,10 @@ After we sent the [MR](https://gitlab.gnome.org/GNOME/gnome-calendar/-/merge_req
 
 Our modifications will take part in the GNOME 47 stable version, but right now this is the behaviour when building from the [GitLab repository version](https://gitlab.gnome.org/GNOME/gnome-calendar):
 
-![Identifying meeting service]({{ '/assets/img/2024-07-13-contributing-to-gnome-3/known-service.png' | relative_url }})
+![Identifying meeting service]({{ '/assets/img/2024-07-13-contributing-to-gnome-03/known-service.png' | relative_url }})
 _Tooltip displaying the meeting service name_
 
-![Link truncated]({{ '/assets/img/2024-07-13-contributing-to-gnome-3/unknown-service.png' | relative_url }})
+![Link truncated]({{ '/assets/img/2024-07-13-contributing-to-gnome-03/unknown-service.png' | relative_url }})
 _When the meeting service is unknown, the link is now truncated at 50 characters_
 
 When the location is not a URI, it's displayed as usual in its full length.

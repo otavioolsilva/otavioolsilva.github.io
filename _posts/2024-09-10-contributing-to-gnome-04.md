@@ -5,7 +5,7 @@ categories: [Experiences with FLOSS, GNOME]
 tags: [FLOSS, gnome-calendar, MAC0456]
 ---
 
-In the [last post](https://otavioolsilva.github.io/posts/contributing-to-gnome-3/), me and [Felipe Aníbal](https://felipeanibal.github.io/) have made some great advances, and I think it wasn't different this time (or maybe I'm just accumulating too much content for one post). Our expectations were to keep looking at issues from the GNOME Calendar related to time zones, specially trying to expand the test suite on it, as described in the epic issue [#1093](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1093). We submitted patches for two of the issues listed and we're also working on some others of them, lots of work to do!
+In the [last post](https://otavioolsilva.github.io/posts/contributing-to-gnome-03/), me and [Felipe Aníbal](https://felipeanibal.github.io/) have made some great advances, and I think it wasn't different this time (or maybe I'm just accumulating too much content for one post). Our expectations were to keep looking at issues from the GNOME Calendar related to time zones, specially trying to expand the test suite on it, as described in the epic issue [#1093](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1093). We submitted patches for two of the issues listed and we're also working on some others of them, lots of work to do!
 
 Also it's worth to point out that the [GNOME 47 is very close to be released](https://release.gnome.org/calendar/)! We're currently at the 47.rc version (release candidate) and the 47 newstable release is planned for September 18th. The merge requests we sent so far will be available on the stable version of the GNOME Calendar in this release! 🥳
 
@@ -22,7 +22,7 @@ That wasn't the only problem: also note that the start and end dates were being 
 
 This changes were submitted in the merge request [!463](https://gitlab.gnome.org/GNOME/gnome-calendar/-/merge_requests/463) and already merged, with this being the final result:
 
-![GNOME Calendar import dialog fixed]({{ '/assets/img/2024-09-10-contributing-to-gnome-4/import-dialog.png' | relative_url }})
+![GNOME Calendar import dialog fixed]({{ '/assets/img/2024-09-10-contributing-to-gnome-04/import-dialog.png' | relative_url }})
 _The correct behavior_
 
 Remember, however, that we found this issue in that epic issue that asked for improvements on the test suite. And where is the test for our change? The problem is that it would require us to test UI stuff, checking if the text exhibited was correct, and this can be very complicated. So, for the moment, we just sent the fix without the test. 

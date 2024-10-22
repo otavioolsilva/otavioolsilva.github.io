@@ -37,7 +37,7 @@ In our first issue, we proposed an improvement in the way URLs are displayed in 
 
 In our second issue, we were searching for some time zone strange behaviors to be tested and ended up going deep in a bug: all-day events can appear with one day offset in the lateral menu, but it only occurs in some time zones. We found that it's probably a problem with the time zone offset when applied to the dates. We are also waiting for the maintainers answer. Working on it was trully amazing, as we had to take a close look to the code and investigate how the functions were working together.
 
-More can be seen in [this first post](https://otavioolsilva.github.io/posts/contributing-to-gnome-1/) and in [this update on our progress post](https://otavioolsilva.github.io/posts/contributing-to-gnome-2/).
+More can be seen in [this first post](https://otavioolsilva.github.io/posts/contributing-to-gnome-01/) and in [this update on our progress post](https://otavioolsilva.github.io/posts/contributing-to-gnome-02/).
 
 ## Seminars and classes
 

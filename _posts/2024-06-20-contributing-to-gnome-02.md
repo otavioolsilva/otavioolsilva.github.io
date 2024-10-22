@@ -5,7 +5,7 @@ categories: [Experiences with FLOSS, GNOME]
 tags: [FLOSS, gnome-calendar, MAC0470]
 ---
 
-After some weeks studying and thinking on some [GNOME Calendar issues on GitLab](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues), this is a first report of our advances in this new project, following the roadmap described in the [last post](https://otavioolsilva.github.io/posts/contributing-to-gnome-1/). 
+After some weeks studying and thinking on some [GNOME Calendar issues on GitLab](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues), this is a first report of our advances in this new project, following the roadmap described in the [last post](https://otavioolsilva.github.io/posts/contributing-to-gnome-01/). 
 
 ## First week: studying the app and the first issue
 
@@ -13,11 +13,11 @@ During all my time using GNU/Linux I have used the GNOME Desktop Environment (DE
 
 The idea of the issue is: when creating an event on the Calendar you can set its location, which is exibited in the popover widget (the popup box that opens when you click at the event) and in the tooltip (the dialog that is shown when the mouse hovers over the event). In the popover, a cool feature is that when the location is a known meeting service link, its name is showed above the URL:
 
-![Meeting service name above the URL]({{ '/assets/img/2024-06-20-contributing-to-gnome-2/popover.png' | relative_url }})
+![Meeting service name above the URL]({{ '/assets/img/2024-06-20-contributing-to-gnome-02/popover.png' | relative_url }})
 
 However, in the tooltip it isn't useful to display all the URL, as it can end up hiding other informations bellow the tooltip, especially when the link is big, and it isn't even clickable:
 
-![Tooltip can be annoying]({{ '/assets/img/2024-06-20-contributing-to-gnome-2/tooltip.png' | relative_url }})
+![Tooltip can be annoying]({{ '/assets/img/2024-06-20-contributing-to-gnome-02/tooltip.png' | relative_url }})
 
 So, why not to reuse the function that parses the URL in the popover to display the meeting service provider name in the tooltip instead of the link? We have work to do!
 
