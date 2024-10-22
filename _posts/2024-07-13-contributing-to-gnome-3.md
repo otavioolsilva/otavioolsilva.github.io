@@ -13,10 +13,10 @@ After we sent the [MR](https://gitlab.gnome.org/GNOME/gnome-calendar/-/merge_req
 
 Our modifications will take part in the GNOME 47 stable version, but right now this is the behaviour when building from the [GitLab repository version](https://gitlab.gnome.org/GNOME/gnome-calendar):
 
-![Identifying meeting service](https://i.imgur.com/uSkuS3p.png)
+![Identifying meeting service]({{ '/assets/img/2024-07-13-contributing-to-gnome-3/known-service.png' | relative_url }})
 _Tooltip displaying the meeting service name_
 
-![Link truncated](https://i.imgur.com/tV1vEzu.png)
+![Link truncated]({{ '/assets/img/2024-07-13-contributing-to-gnome-3/unknown-service.png' | relative_url }})
 _When the meeting service is unknown, the link is now truncated at 50 characters_
 
 When the location is not a URI, it's displayed as usual in its full length.

@@ -22,7 +22,7 @@ That wasn't the only problem: also note that the start and end dates were being 
 
 This changes were submitted in the merge request [!463](https://gitlab.gnome.org/GNOME/gnome-calendar/-/merge_requests/463) and already merged, with this being the final result:
 
-![GNOME Calendar import dialog fixed](https://i.imgur.com/v4IOmY7.png)
+![GNOME Calendar import dialog fixed]({{ '/assets/img/2024-09-10-contributing-to-gnome-4/import-dialog.png' | relative_url }})
 _The correct behavior_
 
 Remember, however, that we found this issue in that epic issue that asked for improvements on the test suite. And where is the test for our change? The problem is that it would require us to test UI stuff, checking if the text exhibited was correct, and this can be very complicated. So, for the moment, we just sent the fix without the test. 
