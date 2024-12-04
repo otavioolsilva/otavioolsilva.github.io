@@ -7,7 +7,7 @@ tags: [FLOSS, gnome-calendar, MAC0456]
 
 If I said in the [last post](https://otavioolsilva.github.io/posts/contributing-to-gnome-05/) that me and [Felipe](https://felipeanibal.github.io/) took the idea of working on only one issue at a time too seriously, in these last weeks we went even far (or better, less far): we stayed in the same issue we worked on in that post. However, this decision helped us to understand a lot about how the GNOME Calendar is structured and how the libraries work under the hood. Below, I describe in more detail our contributions and studies during this time.
 
-# More adjusts to the import dialog, #1243
+## More adjusts to the import dialog, #1243
 
 Our MR [!496](https://gitlab.gnome.org/GNOME/gnome-calendar/-/merge_requests/496) cited in the last post was merged with some few adjusts suggested by [Georges](https://gitlab.gnome.org/feaneron), but it doesn't completely close issue [#1243](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1243): the import dialog now doesn't break when importing files with encodings other than UTF-8 that have a byte-order-mask (BOM) in the beginning of it, however events being imported with virtual time zones are still being displayed with an incorrect time offset. To fix this problem, we decided to first study how Evolution's Calendar handles VTIMEZONES and then understand how GNOME Calendar parses time zones read from files, so we would have in mind what we would need to change to achieve our goal. To clarify: [RFC5545](https://datatracker.ietf.org/doc/html/rfc5545) defines the iCalendar data format, which is a standand for representing calendar data so it can be imported by different calendar apps; among the possible fields that can be defined, we can create artificial time zones, called VTIMEZONES, explicitly stating the offset from UTC (+00 time zone) we want to use for it.
 
@@ -19,7 +19,7 @@ Looking more closely to the import dialog, we observed that its logic handling e
 
 To make sure this behavior in the import dialog will persist, we also created an unit test for this util function: we proposed a new test file (test-utils.c) that will be useful to test the util functions, like this one we modified, and we already created the first test, using different real and virtual time zones to see if the behavior of the `gcal_date_time_from_icaltime` function is the one we expect. We would also like to create tests to check if the GDateTime created by this function matches the one used by the rest of the Calendar, but this looked to be something a little more complicated, as it would require us to manipulate the time zone caches as I described above. Certainly something for the future!
 
-# Next steps
+## Next steps
 
 We've been diving deep into the GNOME Calendar's code over the past few weeks and our learnings have brought some light to what we are capable to do and what we're not, considering the Calendar's current structure. In this way, some next steps we want to consider for our future contributions are:
 
