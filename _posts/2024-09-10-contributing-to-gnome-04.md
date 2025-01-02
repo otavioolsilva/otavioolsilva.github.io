@@ -29,7 +29,7 @@ Remember, however, that we found this issue in that epic issue that asked for im
 
 ## A curious drag and drop bug, #1198
 
-Another interesting issue ([#1198](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1198)): specifically in the week where the switch of time zones for daylight savings occurs, when dragging and dropping an event to change its date/time in the Calendar its start and end times would be shifted by one hour, as you can see in the video bellow (click to view it, credits to [Jeff](https://gitlab.gnome.org/jfft)):
+Another interesting issue ([#1198](https://gitlab.gnome.org/GNOME/gnome-calendar/-/issues/1198)): specifically in the week where the switch of time zones for daylight savings occurs, when dragging and dropping an event to change its date/time in the Calendar its start and end times would be shifted by one hour, as you can see in the video below (click to view it, credits to [Jeff](https://gitlab.gnome.org/jfft)):
 
 ![A video reproducing the issue](https://gitlab.gnome.org/-/project/198/uploads/cd3ebe90a465619a2c427ce3e91eff87/GNOME_Calendar_46_weekview_timetable_drag-and-drop_event_moving_during_week_of_the_DST_switch.webm)
 _Events are being displayed with an one hour offset, click above to view the video_

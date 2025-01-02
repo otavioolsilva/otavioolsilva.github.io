@@ -17,7 +17,7 @@ This project was born at the University of São Paulo by some Computer Science s
 
 After some time looking the issues listed in the GitHub repo, me and my partner [Felipe Aníbal](https://felipeanibal.github.io/sl) chose to work on an [enhacement suggestion](https://github.com/kworkflow/kworkflow/issues/1096) to `kw drm` made by [Rodrigo Siqueira](https://github.com/rodrigosiqueira), one of the main maintainers in the project.
 
-`kw drm` is a tool aimed to provide some facilities to interact with the DRM subsystem in the Linux Kernel. The Direct Rendering Manager (DRM) subsystem is responsible for interfacing with GPUs of modern video cards, making possible to the user to send commands to the GPU and send/get some data. The `kw drm` tool uses this API to make easier to perform some actions, such as the one I describe bellow.
+`kw drm` is a tool aimed to provide some facilities to interact with the DRM subsystem in the Linux Kernel. The Direct Rendering Manager (DRM) subsystem is responsible for interfacing with GPUs of modern video cards, making possible to the user to send commands to the GPU and send/get some data. The `kw drm` tool uses this API to make easier to perform some actions, such as the one I describe below.
 
 The `kw drm --conn-available` lists all the connectors available in the target machine, like this (in my own machine):
 
@@ -50,7 +50,7 @@ Today (05/27/24) finally our pull request was [accepted](https://github.com/kwor
 
 - For every connector, when we were checking if it's enabled we were oppening a new ssh connection every time. This is clearly not optimal, but we were not aware of what was happening when we called the `cmd_remotely` function as described in the last section. We changed this behavior by using the `-exec` flag with the `find` command when getting the connectors list in order to get its state together with his name, so in all the final logic implemented we only make one ssh connection. This also simplified the way we were implementing the tests, possibiliting to use only static values in the mock `cmd_remotely` function.
 
-- In the last section we showed an example of how we expected to be the result of our change. But one thing we didn't notice is that it wasn't really informative when we have more than one connector with the same name. Imagine that we have two HDMIs connectors, with only one in use: we would have an output with `HDMI *` and another `HDMI`, without differentiating them. So, for the final version, now the command shows the index of the connector, like bellow:
+- In the last section we showed an example of how we expected to be the result of our change. But one thing we didn't notice is that it wasn't really informative when we have more than one connector with the same name. Imagine that we have two HDMIs connectors, with only one in use: we would have an output with `HDMI *` and another `HDMI`, without differentiating them. So, for the final version, now the command shows the index of the connector, like below:
 
 ```text
 [remote] Card1 supports:

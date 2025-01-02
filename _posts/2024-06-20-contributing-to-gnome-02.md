@@ -15,7 +15,7 @@ The idea of the issue is: when creating an event on the Calendar you can set its
 
 ![Meeting service name above the URL]({{ '/assets/img/2024-06-20-contributing-to-gnome-02/popover.png' | relative_url }})
 
-However, in the tooltip it isn't useful to display all the URL, as it can end up hiding other informations bellow the tooltip, especially when the link is big, and it isn't even clickable:
+However, in the tooltip it isn't useful to display all the URL, as it can end up hiding other informations below the tooltip, especially when the link is big, and it isn't even clickable:
 
 ![Tooltip can be annoying]({{ '/assets/img/2024-06-20-contributing-to-gnome-02/tooltip.png' | relative_url }})
 
