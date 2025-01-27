@@ -16,7 +16,7 @@ timezone: America/Sao_Paulo
 
 title: Otávio Silva # the main title
 
-tagline: A blog to share some study experiences # it will display as the sub-title
+tagline: Sharing studies experiences in Computer Science  # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A simple blog used to relate some of my experiences while working on open-source projects and programming in general, but who knows what this could turn into!

@@ -1,8 +1,5 @@
 #  The contact options.
 
-- type: github
-  icon: "fab fa-github"
-
 - type: linkedin
   icon: "fab fa-linkedin"   # icons powered by <https://fontawesome.com/>
   url: "https://www.linkedin.com/in/otaviools/"
@@ -10,6 +7,13 @@
 - type: email
   icon: "fas fa-envelope"
   noblank: true # open link in current tab
+
+- type: github
+  icon: "fab fa-github"
+
+- type: gitlab
+  icon: "fab fa-gitlab"
+  url: "https://gitlab.com/otavioolsilva"
 
 # Uncomment and complete the url below to enable more contact options
 #
