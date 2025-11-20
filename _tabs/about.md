@@ -4,9 +4,9 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-Hi! My name is Otávio and this is my personal blog where I write about experiences while studying, to share and document them. I'm an undergraduate student in Computer Science at the Institute of Mathematics and Statistics from the University of São Paulo (IME - USP), now in my 7th semester (2025/1).
+Hi! My name is Otávio, a Brazilian student currently pursuing a Master of Science in Engineering ("Diplôme d'Ingénieur") at Télécom Paris, part of the Institut Polytechnique de Paris (IP Paris). I'm also an undergraduate in Computer Science at the Institute of Mathematics and Statistics at the University of São Paulo (IME-USP).
 
-I'm currently interested in the fields of computer networks and security, working on a scientific initiation project that also explores machine learning and Internet of Things. I also contribute to some open source projects, mainly in the GNOME ecosystem.
+I'm deeply interested in cybersecurity and computer networks, especially exploring applications of machine learning models in these fields. I also support open-source projects, with contributions to the GNOME ecosystem.
 
-I hope to be able to share my enthusiasm. :)
+The idea of this blog is to write about some experiences during my journey with the topics above (or others, who knows), hoping to be able to share my enthusiasm. :)
 

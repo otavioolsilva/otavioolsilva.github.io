@@ -16,10 +16,10 @@ timezone: America/Sao_Paulo
 
 title: Otávio Silva # the main title
 
-tagline: Sharing studies experiences in Computer Science  # it will display as the sub-title
+tagline: Sharing study experiences in Computer Science  # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  A simple blog used to relate some of my experiences while working on open-source projects and programming in general, but who knows what this could turn into!
+  Telling stories about computers. To be more precise, a blog to keep track of my experiences as a Computer Science student.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
